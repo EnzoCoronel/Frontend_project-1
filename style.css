@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: rgb(72, 72, 72);
+  font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.logo {
+  background-color: #e60012;
+  border: none;
+  width: 105px;
+  height: 52px;
+}
+
+.icon {
+  margin-right: 6px;
+}
+
+.arrow {
+  margin-left: 6px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  font: inherit;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  fill: rgb(72, 72, 72);
+}
+
+.link:hover {
+  color: #e60012;
+  fill: #e60012;
+}
+
+form {
+  border-bottom: 1px solid black;
+  display: inline-flex;
+  align-items: center;
+}
+
+form:hover {
+  border-color: #e60012;
+}
+
+input {
+  background: none;
+  border: none;
+  font: inherit;
+  text-decoration: none;
+  font-size: 14px;
+  min-width: 300px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.smaller {
+  font-size: 14px;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.top-right {
+  display: flex;
+  padding: 0 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1%;
+  height: 44px;
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+nav .link:first-child {
+  color: #e60012;
+  fill: #e60012;
+}
+
+nav .link:first-child:before {
+  bottom: 2px;
+  background-color: #e60012;
+  content: "";
+  height: 4px;
+  position: absolute;
+  width: 10%;
+}
+
+main {
+  margin-top: 96px;
+  height: 3000px;
+}
+
+.notification {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  background-color: rgb(248, 248, 248);
+  -webkit-font-smoothing: antialiased;
+}
+
+.notification .icon {
+  margin-right: 12px;
+}
+
+.notification div {
+  padding: 0 16px;
+  display: flex;
+}
+
+.notification div:first-child {
+  border-right: 1px solid black;
+}
+
+.main-top {
+  position: relative;
+  background-color: rgb(214, 240, 250);
+}
+
+.showcase {
+  display: grid;
+  background-color: white;
+  padding: 32px 48px;
+  max-width: 1240px;
+  margin: 0 auto;
+  transform: translateY(15%);
+  box-shadow: rgba(60, 64, 89, 0.15) 0px 4px 16px 0px;
+}
+
+.game-img {
+  width: 50%;
+}
+
+.footer-top {
+  background-color: #e60012;
+}
+
+@media (min-width: 1025px) {
+}
