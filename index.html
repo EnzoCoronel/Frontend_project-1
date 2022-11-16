@@ -177,7 +177,7 @@
               fill="#e60012"
             ></path>
           </svg>
-        <p>
+          <p>
             <span class="bold">Free shipping</span> on orders $50 or more.
             <span class="underline smaller">Restrictions apply</span>
           </p>
@@ -258,7 +258,7 @@
             </div>
             <div class="align">
               <a href="#">
-                <img src="svgs/rating.svg" alt="Everyone 10+" />
+                <img class="rating" src="svgs/rating.svg" alt="Everyone 10+" />
               </a>
               <div id="violence">
                 <p>
@@ -266,7 +266,7 @@
                   Gambling, Mild Language, Mild Blood
                 </p>
                 <hr />
-                <p>User Interact</p>
+                <p>Users Interact</p>
               </div>
             </div>
           </div>
@@ -297,7 +297,7 @@
                 Eligible for up to <span class="bold">75</span> Gold Points
               </p>
             </div>
-            <a id="dowload" href="#">
+            <a class="redbutton" id="dowload" href="#">
               <svg class="icon" viewBox="0 0 32 32" width="24">
                 <path
                   d="M4.3 19.4v5.3c0 .5.5.9 1 .9h21.4c.5 0 1-.5 1-.9v-5.3H32v6.3c-.2 2.2-2.1 4-4.4 4H4.2c-2.3 0-4.2-1.8-4.2-4v-6.3h4.3zM17.9 2.2v12.2l5-4.8 2.8 2.8-9.8 9.9L6 12.5l2.6-2.8 5.2 4.8V2.2h4.1z"
@@ -314,7 +314,7 @@
       </section>
       <section class="summary main-margin">
         <div class="desc">
-          <p>
+          <p class="paragraph">
             You’ve inherited your grandfather’s old farm plot in Stardew Valley.
             Armed with hand-me-down tools and a few coins, you set out to begin
             your new life. Can you learn to live off the land and turn these
@@ -346,15 +346,146 @@
         <img class="desc-img" src="imgs/title.jpg" alt="Titlecard" />
       </section>
       <section class="main-margin">
-        <div>
-          <div class="about">
-            <p>texto</p>
+        <div class="about">
+          <div id="info">
+            <div>
+              <h4>ESRB rating</h4>
+              <a href="#">
+                <div id="rate" class="align">
+                  <a href="#">
+                    <img
+                      class="rating"
+                      src="svgs/rating.svg"
+                      alt="Everyone 10+"
+                    />
+                  </a>
+                  <div id="violence">
+                    <p>
+                      Fantasy Violence, Use of Alcohol, Use of Tabacco,
+                      Simulated Gambling, Mild Language, Mild Blood
+                    </p>
+                    <hr />
+                    <p>Users Interact</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div>
+              <h4>Supported play modes</h4>
+              <div id="suports">
+                <div>
+                  <div class="mode">
+                    <img src="svgs/tv.svg" alt="TV" />
+                  </div>
+                  <p>TV</p>
+                </div>
+                <div>
+                  <div class="mode">
+                    <img src="svgs/tabletop.svg" alt="Tabletop" />
+                  </div>
+                  <p>Tabletop</p>
+                </div>
+                <div>
+                  <div class="mode">
+                    <img src="svgs/handheld.svg" alt="Handheld" />
+                  </div>
+                  <p>Handheld</p>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="info">
-            <p>segundo texto</p>
+          <div class="details">
+            <div id="datatable">
+              <div class="align">
+                <img src="svgs/calendar.svg" alt="Calendar" />
+                <h3>Release Date</h3>
+                <p>October 5, 2017</p>
+              </div>
+              <div class="align">
+                <img src="svgs/group.svg" alt="Group" />
+                <h3>No. of players</h3>
+                <p>
+                  <a class="hyperlink" href="#">Single System(1)</a>
+                  <a class="hyperlink" href="#">Local wireless(1)</a>
+                  <a class="hyperlink" href="">Online(1-4)</a>
+                </p>
+              </div>
+              <div class="align">
+                <img src="svgs/dpad.svg" alt="Dpad" />
+                <h3>Genre</h3>
+                <p>
+                  <a class="hyperlink" href="#">Role-Playing</a>
+                  <a class="hyperlink" href="#">Simulation</a>
+                </p>
+              </div>
+              <div class="align">
+                <img src="svgs/building.svg" alt="Building" />
+                <h3>Publisher</h3>
+                <a class="hyperlink" href="#">ConcernedApe</a>
+              </div>
+              <div class="align">
+                <img src="svgs/gear.svg" alt="Gear" />
+                <h3>ESRB rating</h3>
+                <a class="hyperlink" href="#">Everyone 10+</a>
+              </div>
+              <div class="align">
+                <img src="svgs/switchlite.svg" alt="Switch Lite" />
+                <h3>Supported play modes</h3>
+                <p>TV mode, Tabletop mode, Handheld mode</p>
+              </div>
+              <div class="align">
+                <img src="svgs/storage.svg" alt="Storage" />
+                <h3>Game file size</h3>
+                <p>1.5 GB</p>
+              </div>
+              <div class="align">
+                <img src="svgs/globe.svg" alt="Globe" />
+                <h3>Supported languages</h3>
+                <p>
+                  English, French, German, Italian, Japanese, Korean,
+                  Portuguese, Russian, Simplified Chinese, Spanish, Tradicional
+                  Chinese
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+      <section class="main-margin">
+        <div id="online">
+          <div>
+            <img src="svgs/switch.svg" alt="Switch Online" />
+            <p class="paragraph">
+              Play online, access classic NES™ and Super NES™ games, and more
+              with a Nintendo Switch Online membership.
+            </p>
+            <p class="paragraph">
+              This game supports:
+              <a class="hyperlink" href="#">Online Play</a>
+              <a class="hyperlink" href="#">Save Data Cloud</a>
+            </p>
+            <a class="redbutton" id="learnmore" href="#">Learn more</a>
+          </div>
+          <img src="imgs/Pro-Controller-Hands.png" alt="Switch controller" />
+        </div>
+      </section>
+      <section class="warning main-margin">
+        <p class="paragraph">
+          WARNING: If you have epilepsy or have had seizures or other unusual
+          reactions to flashing lights or patterns, consult a doctor before
+          playing video games. All users should read the Health and Safety
+          Information available in the system settings before using this
+          software.
+        </p>
+        <p class="paragraph">
+          Nintendo Switch Online membership (sold separately) and Nintendo
+          Account required for online play. Not available in all countries.
+          Internet access required for online features. Terms apply.
+          nintendo.com/switch-online
+        </p>
+        <p class="paragraph">
+          Stardew Valley © ConcernedApe LLC 2016-2020. All rights reserved.
+        </p>
       </section>
     </main>
     <footer>
