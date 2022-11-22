@@ -93,6 +93,83 @@ input {
   min-width: 280px;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.categories-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 0.25rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.categories-dropdown p {
+  padding: 4px 8px;
+}
+
+.categories-dropdown p:hover {
+  background-color: lightgray;
+}
+
+.dropdown:hover .categories-dropdown {
+  display: block;
+}
+
+nav:hover ~ .nav-drop {
+  display: flex;
+}
+
+.nav-drop:hover {
+  display: flex;
+}
+
+.nav-drop {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+}
+
+.drop-group {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  column-gap: 1.75rem;
+  fill: rgb(72, 72, 72);
+}
+
+.drop-group :hover .socorro {
+  background-color: #e60012;
+  fill: white;
+}
+
+.drop-group > a {
+  width: 7.5rem;
+}
+
+.socorro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  border: 1px solid lightgray;
+}
+
+.socorro svg {
+  margin: 10px;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -241,12 +318,17 @@ main {
   font-size: 1.75rem;
 }
 
+#price{
+  font-size: 1.25rem;
+}
+
 .carousel {
   display: flex;
   position: relative;
   scroll-behavior: smooth;
   overflow-x: scroll;
-  margin-bottom: 1rem;
+  margin: 0 1rem 1rem 1rem;
+  max-width: 90rem;
 }
 
 .carousel::-webkit-scrollbar {
@@ -255,6 +337,7 @@ main {
 
 .carousel-list {
   display: flex;
+  padding-bottom: 1rem;
 }
 
 .carousel-list a {
@@ -295,6 +378,10 @@ main {
   width: 2px;
 }
 
+.purchase p {
+  font-size: 0.625rem;
+}
+
 .align {
   display: flex;
   align-items: center;
@@ -332,7 +419,7 @@ main {
   grid-template-columns: 1fr;
   row-gap: 1.75rem;
   column-gap: 1.75rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .desc-text {
@@ -356,15 +443,10 @@ main {
   font-size: 0.75rem;
 }
 
-.about {
-  max-width: 71.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 #info {
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: center;
   column-gap: 1.5rem;
   row-gap: 1.5rem;
 }
@@ -374,7 +456,7 @@ main {
 }
 
 #info > div {
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0.5rem;
   background-color: rgb(248, 248, 248);
   text-align: center;
 }
@@ -603,7 +685,63 @@ a {
   margin-bottom: 1.5rem;
 }
 
-#mobilemenu div {
+#mobilemenu:hover #riseup {
+  display: block;
+}
+
+#riseup {
+  display: none;
+  position: absolute;
+  bottom: 29px;
+  height: 60vh;
+  width: 100%;
+  overflow: scroll;
+  border-radius: 20px;
+  background-color: rgb(239, 239, 239);
+  fill: rgb(230, 0, 18);
+}
+
+.menu-head {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.menu-head button {
+  position: absolute;
+  right: 1rem;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  font-weight: bold;
+  padding: 0 1.5rem;
+  border: solid rgb(218, 218, 218);
+  border-width: 0px 0px 1px 0px;
+  background-color: white;
+}
+
+.menu-btn svg {
+  margin-right: 0.5rem;
+  display: inline-flex;
+}
+
+.menu-btn p {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 16px;
+}
+
+.last-menu {
+  margin-top: 1rem;
+}
+
+#btnbar {
   position: relative;
   height: 58px;
   display: flex;
@@ -679,6 +817,14 @@ a {
     padding: 0;
   }
 
+  .purchase p {
+    font-size: 0.75rem;
+  }
+
+  .carousel {
+    margin: 0 auto 1rem auto;
+  }
+
   #E10 {
     display: flex;
   }
@@ -687,12 +833,21 @@ a {
     padding: 0;
   }
 
+  #price{
+    font-size: 1.75rem;
+  }
+
   #info {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  #info > div {
+    padding: 1.5rem 2rem;
+  }
+
   #summary {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
   }
 
   #datatable div {
