@@ -34,7 +34,7 @@
               placeholder="Search games, hardware, news, etc"
             />
             <div class="dropdown">
-              <button class="link">
+              <button onclick="categoryDrop()" class="link" id="firstbtn">
                 All categories
                 <svg class="arrow" width="14" viewBox="0 0 32 32">
                   <path
@@ -43,7 +43,7 @@
                   ></path>
                 </svg>
               </button>
-              <div class="categories-dropdown">
+              <div class="categories-dropdown" id="firstdrop">
                 <p>All categories</p>
                 <p>Games</p>
                 <p>Hardware</p>
@@ -118,7 +118,7 @@
           </svg>
           Holiday Gift Guide
         </a>
-        <button class="link">
+        <button onclick="dropGroup('game-group'); navDrop()" class="link">
           <svg class="icon" id="games" viewBox="0 0 32 32" width="16">
             <path
               d="M30.1 10.4h-8.5V1.9c0-1-.8-1.9-1.9-1.9h-7.5c-1 0-1.9.8-1.9 1.9v8.5H1.9c-1 0-1.9.8-1.9 1.9v7.5c0 1 .8 1.9 1.9 1.9h8.5v8.5c0 1 .8 1.9 1.9 1.9h7.5c1 0 1.9-.8 1.9-1.9v-8.5h8.5c1 0 1.9-.8 1.9-1.9v-7.5c-.1-1.1-.9-1.9-2-1.9zM7.5 16.9H3.8c-.5 0-.9-.4-.9-.9s.4-.9.9-.9h3.8c.5 0 .9.4.9.9s-.5.9-1 .9zm9.4 11.3c0 .5-.4.9-.9.9s-.9-.4-.9-.9v-3.8c0-.5.4-.9.9-.9s.9.4.9.9v3.8zm0-20.7c0 .5-.4.9-.9.9s-.9-.4-.9-.9V3.8c0-.5.4-.9.9-.9s.9.4.9.9v3.7zm11.3 9.4h-3.8c-.5 0-.9-.4-.9-.9s.4-.9.9-.9h3.8c.5 0 .9.4.9.9.1.5-.3.9-.9.9z"
@@ -133,7 +133,7 @@
             ></path>
           </svg>
         </button>
-        <button class="link">
+        <button onclick="dropGroup('switch-group'); navDrop()" class="link">
           <svg class="icon" viewBox="0 0 32 32" width="16">
             <path
               d="M13.54 0a.18.18 0 0 1 .17.17v31.66a.15.15 0 0 1-.17.17H8.11a6.86 6.86 0 0 1-6.85-6.8V6.74A6.81 6.81 0 0 1 8.11 0h5.43zm10.4 0a6.77 6.77 0 0 1 6.8 6.74V25.2a6.82 6.82 0 0 1-6.85 6.8h-5.43a.15.15 0 0 1-.17-.17V.17c0-.11.11-.17.22-.17h5.43zM7.49 19.6a1.26 1.26 0 1 0 0 2.51 1.32 1.32 0 0 0 1.31-1.25 1.28 1.28 0 0 0-1.31-1.26zm17-3.6a2.86 2.86 0 0 0-2.85 2.86A2.86 2.86 0 1 0 24.51 16zm-14.28.86a1.26 1.26 0 1 0 0 2.51 1.35 1.35 0 0 0 1.31-1.26 1.32 1.32 0 0 0-1.29-1.25zm-5.49 0a1.26 1.26 0 1 0 0 2.51 1.36 1.36 0 0 0 1.32-1.26 1.28 1.28 0 0 0-1.3-1.25zm2.75-2.69a1.26 1.26 0 1 0 0 2.52 1.37 1.37 0 0 0 1.33-1.26 1.28 1.28 0 0 0-1.31-1.26zm17-4a1.36 1.36 0 0 0-1.31 1.26 1.32 1.32 0 1 0 1.31-1.26zm-17-5.08a2.86 2.86 0 1 0 0 5.71 2.86 2.86 0 0 0 2.85-2.86 2.82 2.82 0 0 0-2.83-2.85zm19.77 2.4a1.26 1.26 0 1 0 1.31 1.25 1.32 1.32 0 0 0-1.29-1.25zm-5.43 0a1.26 1.26 0 1 0 1.31 1.25 1.29 1.29 0 0 0-1.29-1.25zm2.68-2.75A1.36 1.36 0 0 0 23.2 6a1.32 1.32 0 1 0 1.31-1.26z"
@@ -173,7 +173,7 @@
           </svg>
         </button>
       </nav>
-      <div class="nav-drop">
+      <div id="nav-drop">
         <div class="start-right">
           <button class="link">
             <svg viewBox="0 0 32 32" width="26">
@@ -185,8 +185,8 @@
             </svg>
           </button>
         </div>
-        <div class="drop-group">
-          <a href="">
+        <div class="drop-group" id="game-group">
+          <a href="#">
             <div>
               <div class="socorro">
                 <svg viewBox="0 0 32 32" width="42">
@@ -248,6 +248,63 @@
                 </svg>
               </div>
               <p>Shop games</p>
+            </div>
+          </a>
+        </div>
+        <div class="drop-group" id="switch-group">
+          <a href="">
+            <div>
+              <div class="socorro">
+                <img src="imgs/lineup.png" alt="Nintendo Switch lineup" />
+              </div>
+              <p>Nintendo Switch Lineup</p>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <div class="socorro">
+                <svg viewBox="0 0 65.62 43.47" width="42">
+                  <path
+                    fill-rule="evenodd"
+                    fill="inherit"
+                    d="M33.64 14.63L19.01 29.25l-3.65-3.66 8.41-8.41L0 17.31v-5.37l23.77.13-8.41-8.41L19.01 0l14.63 14.63zM31.98 28.84L46.6 43.47l3.66-3.66-8.41-8.41 23.77.12v-5.36l-23.77.13 8.41-8.41-3.66-3.66-14.62 14.62z"
+                  ></path>
+                </svg>
+              </div>
+              <p>Compare systems</p>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <div class="socorro">
+                <svg viewBox="0 0 32 32" width="42">
+                  <path
+                    fill="inherit"
+                    d="M0 0v32h32V0zm8.785 9.232a3.7 3.7 0 0 1 3.7-3.7h3.154a.106.106 0 0 1 .106.106v14.218a.106.106 0 0 1-.106.106h-3.154a3.7 3.7 0 0 1-3.7-3.7zM6.767 26.596a2.034 2.034 0 1 1 2.064-2.034 2.05 2.05 0 0 1-2.064 2.034zm6.473-.124h-.677l-2.032-2.547v2.547h-.773v-3.82h.77l1.9 2.464v-2.464h.812zm4.025 0H14.35v-3.82h.82v3.075h2.094zm1.616 0h-.82v-3.82h.82zm-1.586-6.51a.105.105 0 0 1-.106-.106V5.626a.093.093 0 0 1 .094-.094h2.232a3.7 3.7 0 0 1 3.7 3.7v7.03a3.7 3.7 0 0 1-3.7 3.7zm6.178 6.51h-.676l-2.033-2.547v2.547h-.772v-3.82h.769l1.901 2.464v-2.464h.811zm4.27-3.075H25.41v.76h2.22v.707h-2.22v.863h2.333v.745H24.59v-3.82h3.154z"
+                  ></path>
+                  <path
+                    fill="inherit"
+                    d="M6.767 23.306a1.257 1.257 0 1 0 1.214 1.256 1.236 1.236 0 0 0-1.214-1.256zm5.718-4.508h2.097V6.696h-2.097A2.536 2.536 0 0 0 9.95 9.232v7.03a2.536 2.536 0 0 0 2.536 2.536zm-.097-10.294a1.357 1.357 0 1 1-1.356 1.356 1.357 1.357 0 0 1 1.356-1.356zm7.655 3.506a1.459 1.459 0 1 0 1.46 1.458 1.459 1.459 0 0 0-1.46-1.458z"
+                  ></path>
+                </svg>
+              </div>
+              <p>Online service</p>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <div class="socorro">
+                <img src="imgs/procon.png" alt="Pro controller" />
+              </div>
+              <p>Acessories</p>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <div class="socorro">
+                <img src="imgs/oled.png" alt="Switch oled" />
+              </div>
+              <p>shop System</p>
             </div>
           </a>
         </div>
@@ -445,108 +502,107 @@
         <img class="desc-img" src="imgs/title.jpg" alt="Titlecard" />
       </section>
       <section class="main-margin">
-          <div id="info">
-            <div>
-              <h4>ESRB rating</h4>
-              <a href="#">
-                <div id="rate" class="align">
-                  <a href="#">
-                    <img
-                      class="rating"
-                      src="svgs/rating.svg"
-                      alt="Everyone 10+"
-                    />
-                  </a>
-                  <div id="violence">
-                    <p>
-                      Fantasy Violence, Use of Alcohol, Use of Tabacco,
-                      Simulated Gambling, Mild Language, Mild Blood
-                    </p>
-                    <hr />
-                    <p>Users Interact</p>
-                  </div>
+        <div id="info">
+          <div>
+            <h4>ESRB rating</h4>
+            <a href="#">
+              <div id="rate" class="align">
+                <a href="#">
+                  <img
+                    class="rating"
+                    src="svgs/rating.svg"
+                    alt="Everyone 10+"
+                  />
+                </a>
+                <div id="violence">
+                  <p>
+                    Fantasy Violence, Use of Alcohol, Use of Tabacco, Simulated
+                    Gambling, Mild Language, Mild Blood
+                  </p>
+                  <hr />
+                  <p>Users Interact</p>
                 </div>
-              </a>
-            </div>
-            <div>
-              <h4>Supported play modes</h4>
-              <div id="suports">
-                <div>
-                  <div class="mode">
-                    <img src="svgs/tv.svg" alt="TV" />
-                  </div>
-                  <p>TV</p>
+              </div>
+            </a>
+          </div>
+          <div>
+            <h4>Supported play modes</h4>
+            <div id="suports">
+              <div>
+                <div class="mode">
+                  <img src="svgs/tv.svg" alt="TV" />
                 </div>
-                <div>
-                  <div class="mode">
-                    <img src="svgs/tabletop.svg" alt="Tabletop" />
-                  </div>
-                  <p>Tabletop</p>
+                <p>TV</p>
+              </div>
+              <div>
+                <div class="mode">
+                  <img src="svgs/tabletop.svg" alt="Tabletop" />
                 </div>
-                <div>
-                  <div class="mode">
-                    <img src="svgs/handheld.svg" alt="Handheld" />
-                  </div>
-                  <p>Handheld</p>
+                <p>Tabletop</p>
+              </div>
+              <div>
+                <div class="mode">
+                  <img src="svgs/handheld.svg" alt="Handheld" />
                 </div>
+                <p>Handheld</p>
               </div>
             </div>
           </div>
-          <div class="details">
-            <div id="datatable">
-              <div class="align">
-                <img src="svgs/calendar.svg" alt="Calendar" />
-                <h3>Release Date</h3>
-                <p>October 5, 2017</p>
-              </div>
-              <div class="align">
-                <img src="svgs/group.svg" alt="Group" />
-                <h3>No. of players</h3>
-                <p>
-                  <a class="hyperlink" href="#">Single System(1)</a>
-                  <a class="hyperlink" href="#">Local wireless(1)</a>
-                  <a class="hyperlink" href="">Online(1-4)</a>
-                </p>
-              </div>
-              <div class="align">
-                <img src="svgs/dpad.svg" alt="Dpad" />
-                <h3>Genre</h3>
-                <p>
-                  <a class="hyperlink" href="#">Role-Playing</a>
-                  <a class="hyperlink" href="#">Simulation</a>
-                </p>
-              </div>
-              <div class="align">
-                <img src="svgs/building.svg" alt="Building" />
-                <h3>Publisher</h3>
-                <a class="hyperlink" href="#">ConcernedApe</a>
-              </div>
-              <div class="align">
-                <img src="svgs/gear.svg" alt="Gear" />
-                <h3>ESRB rating</h3>
-                <a class="hyperlink" href="#">Everyone 10+</a>
-              </div>
-              <div class="align">
-                <img src="svgs/switchlite.svg" alt="Switch Lite" />
-                <h3>Supported play modes</h3>
-                <p>TV mode, Tabletop mode, Handheld mode</p>
-              </div>
-              <div class="align">
-                <img src="svgs/storage.svg" alt="Storage" />
-                <h3>Game file size</h3>
-                <p>1.5 GB</p>
-              </div>
-              <div class="align">
-                <img src="svgs/globe.svg" alt="Globe" />
-                <h3>Supported languages</h3>
-                <p>
-                  English, French, German, Italian, Japanese, Korean,
-                  Portuguese, Russian, Simplified Chinese, Spanish, Tradicional
-                  Chinese
-                </p>
-              </div>
+        </div>
+        <div class="details">
+          <div id="datatable">
+            <div class="align">
+              <img src="svgs/calendar.svg" alt="Calendar" />
+              <h3>Release Date</h3>
+              <p>October 5, 2017</p>
+            </div>
+            <div class="align">
+              <img src="svgs/group.svg" alt="Group" />
+              <h3>No. of players</h3>
+              <p>
+                <a class="hyperlink" href="#">Single System(1)</a>
+                <a class="hyperlink" href="#">Local wireless(1)</a>
+                <a class="hyperlink" href="">Online(1-4)</a>
+              </p>
+            </div>
+            <div class="align">
+              <img src="svgs/dpad.svg" alt="Dpad" />
+              <h3>Genre</h3>
+              <p>
+                <a class="hyperlink" href="#">Role-Playing</a>
+                <a class="hyperlink" href="#">Simulation</a>
+              </p>
+            </div>
+            <div class="align">
+              <img src="svgs/building.svg" alt="Building" />
+              <h3>Publisher</h3>
+              <a class="hyperlink" href="#">ConcernedApe</a>
+            </div>
+            <div class="align">
+              <img src="svgs/gear.svg" alt="Gear" />
+              <h3>ESRB rating</h3>
+              <a class="hyperlink" href="#">Everyone 10+</a>
+            </div>
+            <div class="align">
+              <img src="svgs/switchlite.svg" alt="Switch Lite" />
+              <h3>Supported play modes</h3>
+              <p>TV mode, Tabletop mode, Handheld mode</p>
+            </div>
+            <div class="align">
+              <img src="svgs/storage.svg" alt="Storage" />
+              <h3>Game file size</h3>
+              <p>1.5 GB</p>
+            </div>
+            <div class="align">
+              <img src="svgs/globe.svg" alt="Globe" />
+              <h3>Supported languages</h3>
+              <p>
+                English, French, German, Italian, Japanese, Korean, Portuguese,
+                Russian, Simplified Chinese, Spanish, Tradicional Chinese
+              </p>
             </div>
           </div>
+        </div>
       </section>
       <section class="main-margin">
         <div id="online">
@@ -864,5 +920,104 @@
         </button>
       </div>
     </div>
+    <div id="modal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img class="game-img" src="imgs/title.jpg" alt="Titlecard" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img class="game-img" src="imgs/farm.jpg" alt="Farm" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img class="game-img" src="imgs/autumn.jpg" alt="Autumn" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img class="game-img" src="imgs/robin.jpeg" alt="Robin" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 5</div>
+          <img class="game-img" src="imgs/docks.jpeg" alt="Docks" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img class="game-img" src="imgs/docks.jpeg" alt="Docks" />
+        </div>
+
+        <a id="img1" class="game-img" href="#img2">
+          <img class="game-img" src="imgs/title.jpg" alt="Titlecard" />
+        </a>
+        <a id="img2" class="game-img" href="#img3">
+          <img class="game-img" src="imgs/farm.jpg" alt="Farm" />
+        </a>
+        <a id="img3" class="game-img" href="#img4">
+          <img class="game-img" src="imgs/autumn.jpg" alt="Autumn" />
+        </a>
+        <a id="img4" class="game-img" href="#img5">
+          <img class="game-img" src="imgs/robin.jpeg" alt="Robin" />
+        </a>
+        <a id="img5" class="game-img" href="#img6">
+          <img class="game-img" src="imgs/docks.jpeg" alt="Docks" />
+        </a>
+        <a id="img6" class="game-img" href="#img7">
+          <img class="game-img" src="imgs/fishing.jpeg" alt="Fishing" />
+        </a>
+        <a id="img7" class="game-img" href="#img1">
+          <img class="game-img" src="imgs/riding.jpeg" alt="Riding" />
+        </a>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="img_nature_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(1)"
+            alt="Nature and sunrise"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="img_snow_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(2)"
+            alt="Snow"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="img_mountains_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(3)"
+            alt="Mountains and fjords"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="img_lights_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(4)"
+            alt="Northern Lights"
+          />
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="script.js"></script>
 </html>

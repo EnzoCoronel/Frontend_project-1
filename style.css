@@ -119,19 +119,15 @@ input {
   background-color: lightgray;
 }
 
-.dropdown:hover .categories-dropdown {
+.show {
   display: block;
 }
 
-nav:hover ~ .nav-drop {
+#nav-drop:hover {
   display: flex;
 }
 
-.nav-drop:hover {
-  display: flex;
-}
-
-.nav-drop {
+#nav-drop {
   display: none;
   flex-direction: column;
   position: absolute;
@@ -155,7 +151,17 @@ nav:hover ~ .nav-drop {
 }
 
 .drop-group > a {
-  width: 7.5rem;
+  min-width: 7.5rem;
+}
+
+.drop-group img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#game-group,
+#switch-group {
+  display: none;
 }
 
 .socorro {
@@ -246,6 +252,7 @@ nav {
 
 nav .link {
   padding: 0 10px;
+  height: 100%;
 }
 
 nav .link:first-child {
@@ -265,6 +272,7 @@ nav .link:first-child:before {
 main {
   margin-top: 46px;
   margin-bottom: 3rem;
+  background-color: white;
 }
 
 .notification {
@@ -318,7 +326,7 @@ main {
   font-size: 1.75rem;
 }
 
-#price{
+#price {
   font-size: 1.25rem;
 }
 
@@ -563,6 +571,10 @@ footer > section > div {
 
 footer > section:first-child {
   background-color: #e60012;
+}
+
+footer > section{
+  background-color: white;
 }
 
 footer > section:last-child {
@@ -833,7 +845,7 @@ a {
     padding: 0;
   }
 
-  #price{
+  #price {
     font-size: 1.75rem;
   }
 
