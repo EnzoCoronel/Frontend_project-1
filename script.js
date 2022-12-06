@@ -1,57 +1,42 @@
+let oldG;
+
 const categoryDrop = () => {
   document.getElementById("firstdrop").classList.toggle("show-block");
 };
 
-const searchDrop = () => {
-  let x = document.getElementById("search-toggle");
-  x.classList.toggle("search-active");
-  document.getElementsByTagName("main")[0].classList.toggle("darken");
-  document.getElementsByTagName("footer")[0].classList.toggle("darken");
+const thisDrop = (thisId, thisClass) => {
+  document.getElementById(thisId).classList.toggle(thisClass);
   document.getElementsByTagName("body")[0].classList.toggle("scroll");
-  document.getElementById("top-correct").classList.toggle("hide");
-};
-
-const navDrop = () => {
-  let x = document.getElementById("nav-toggle");
-  x.classList.add("nav-active");
-  document.getElementsByTagName("main")[0].classList.add("darken");
-  document.getElementsByTagName("footer")[0].classList.add("darken");
-  document.getElementsByTagName("body")[0].classList.add("scroll");
-};
-
-const storeDrop = () => {
-  let x = document.getElementById("store-toggle");
-  x.classList.toggle("store-active");
-  document.getElementsByTagName("main")[0].classList.toggle("darken");
-  document.getElementsByTagName("footer")[0].classList.toggle("darken");
-  document.getElementsByTagName("body")[0].classList.toggle("scroll");
-};
-
-const dropGroup = (group) => {
-  let child = document.getElementsByClassName("drop-group");
-  let x = document.getElementById(group);
-  if (x.classList.contains("show-flex")) {
-    document.getElementsByTagName("main")[0].classList.remove("darken");
-    document.getElementsByTagName("footer")[0].classList.remove("darken");
-    document.getElementById("nav-toggle").classList.remove("nav-active");
-    document.getElementsByTagName("body")[0].classList.remove("scroll");
-  } else {
-    for (i = 0; i < child.length; i++) {
-      child[i].classList.remove("show-flex");
-    }
-    x.classList.toggle("show-flex");
+  document.getElementById("cover").classList.toggle("show-block");
+  if (thisId == "search-toggle"){
+    document.getElementById("top-correct").classList.toggle("hide");
   }
+}
+
+const dropGroup = (group, navId, navClass) => {
+  if (oldG == group) {
+    console.log("same button");
+    thisDrop(navId, navClass);
+  }
+  else{
+    document.getElementById("nav-toggle").classList.add("nav-active");
+    document.getElementsByTagName("body")[0].classList.add("scroll");
+  document.getElementById("cover").classList.add("show-block");
+  }
+  oldG = group;
+  let child = document.getElementsByClassName("drop-group");
+  for (i = 0; i < child.length; i++) {
+    child[i].classList.remove("show-flex");
+  }
+  document.getElementById(group).classList.toggle("show-flex");
 };
 
 window.onclick = function (event) {
-  if (event.target == document.getElementByTagName("header")[0]) {
-    let dropdown = document.getElementById("nav-toggle");
-    if (dropdown.classList.contains("nav-active")) {
-      dropdown.classList.remove("nav-active");
-      document.getElementsByTagName("main")[0].classList.remove("darken");
-      document.getElementsByTagName("footer")[0].classList.remove("darken");
-      document.getElementsByTagName("body")[0].classList.remove("scroll");
-    }
+  if (event.target == document.getElementById("cover")) {
+    document.getElementById("cover").classList.remove("show-block");
+    document.getElementById("nav-toggle").classList.remove("nav-active");
+    document.getElementById("store-toggle").classList.remove("store-active");
+    document.getElementsByTagName("body")[0].classList.remove("scroll");
   }
 };
 
