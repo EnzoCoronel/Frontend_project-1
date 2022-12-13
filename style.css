@@ -438,30 +438,36 @@ main {
 }
 
 .carousel {
-  display: flex;
   position: relative;
-  scroll-behavior: smooth;
-  overflow-x: scroll;
+  overflow: hidden;
   margin: 0 1rem 1rem 1rem;
   max-width: 90rem;
 }
 
-.carousel::-webkit-scrollbar {
-  display: none;
+.carousel-content{
+  display: flex;
+  position: relative;
+  transition: all 0.5s;
 }
 
 .carousel-list {
   display: flex;
+  overflow: hidden;
   padding-bottom: 1rem;
 }
 
-.carousel-list a {
-  margin-right: 5px;
+.carousel-list img {
+  margin-right: 1rem;
+  flex-shrink: 0;
+  width: calc(25% - 0.125rem);
+  margin-bottom: 10px;
 }
 
 .game-img {
   flex-shrink: 0;
   width: 100%;
+  border: none;
+  padding: 0;
 }
 
 .E10 {
@@ -474,6 +480,7 @@ main {
 }
 
 .violence {
+  align-self: center;
   margin-left: 0.75rem;
   max-width: 352px;
 }
@@ -504,6 +511,36 @@ main {
 
 .space {
   justify-content: space-between;
+}
+
+@keyframes example {
+  from {fill: white; stroke: white;}
+  to {fill: rgb(172, 0, 13); stroke: rgb(172, 0, 13);}
+}
+
+.heart{
+  padding: 0;
+  margin-right: -10px;
+}
+
+.heart:hover > svg > .sparks{
+  animation: example 0.2s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-delay: 0;
+}
+
+.heart:hover > svg > *{
+  transition: fill 0.5s;
+  fill: rgb(172, 0, 13);
+}
+
+.heart-filled{
+  display: none;
+}
+
+.sparks{
+  stroke: white;
 }
 
 .coin {
@@ -661,6 +698,38 @@ main {
   font-size: 1.125rem;
   padding: 0.8rem 1.5rem;
   border-radius: 5px;
+}
+
+.like-this h2{
+  margin-bottom: 1rem;
+}
+
+.games-list{
+  display: flex;
+  overflow: scroll;
+}
+
+.game{
+  border: 1px solid rgb(218, 218, 218);
+  width: calc(66.666667% - 0.5rem);
+  margin: 1rem 0.75rem;
+  flex-shrink: 0;
+}
+
+.game p:first-of-type{
+  height: 4rem;
+}
+
+/* .game .nintendo::before {
+  background-color: #e60012;
+  content: "";
+  height: 1em;
+  position: absolute;
+  width: 2px;
+} */
+
+.game-content{
+  padding: 1rem;
 }
 
 .warning {
@@ -902,12 +971,7 @@ a {
 
 /* Modal */
 
-.column {
-  float: left;
-  width: 14%;
-}
-
-#modal {
+.modal {
   display: none;
   position: fixed;
   left: 0;
@@ -917,11 +981,31 @@ a {
   z-index: 10;
 }
 
-.modal-content {
+.modal-box {
+  overflow: hidden;
   position: relative;
   margin: auto;
+  margin-top: 5rem;
   width: calc(100% - 14rem);
   max-width: calc(124.444444vh);
+}
+
+.modal-content {
+  display: flex;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.modal-list{
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-list img{
+  margin: 1rem 1rem 0 0;
+  flex-shrink: 0;
+  width: calc(25% - 0.125rem);
 }
 
 .close {
@@ -934,59 +1018,43 @@ a {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.slides {
-  margin-top: 5rem;
-  display: none;
-}
-
 .prev,
 .next {
+  opacity: 0;
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
   padding: 16px;
-  margin-top: -50px;
   color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+  transition: 0.2s ease;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 50%;
+  margin-top: -50px;
+}
+
+.prev {
+  left: 1rem;
 }
 
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  right: 1rem;
+}
+
+.carousel:hover > a, .modal-box:hover > a{
+  opacity: 1;
 }
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .active,
-.demo:hover {
+.dot:hover {
   opacity: 1;
 }
 
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-/* Toogle classes */
+/* Toggle classes */
 
 .search-active {
   height: 17.5rem;
@@ -1042,6 +1110,14 @@ img.hover-shadow {
     font-size: 1rem;
   }
 
+  .carousel-list img, .modal-list img {
+    width: calc(25% - 0.25rem);
+  }
+
+  .game{
+    max-width: 16.375rem;
+  }
+
   .linkbar {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1089,6 +1165,10 @@ img.hover-shadow {
     margin: 0 auto 1rem auto;
   }
 
+  .carousel-list img, .modal-list img {
+    width: calc(20% - 0.2rem);
+  }
+
   .E10 {
     display: flex;
   }
@@ -1126,6 +1206,10 @@ img.hover-shadow {
     display: block;
   }
 
+  .game{
+    width: calc(40% - 0.4rem);
+  }
+
   .brandbar {
     grid-template-columns: auto repeat(4, 58px);
   }
@@ -1157,6 +1241,12 @@ img.hover-shadow {
   main {
     margin-top: 96px;
     margin-bottom: 4rem;
+  }
+  .carousel-list img, .modal-list img {
+    width: calc(16.666667% - 0.16666666666666666rem);
+  }
+  .game{
+    width: calc(28.571429% - 0.2857142857142857rem);
   }
   .linkbar {
     grid-template-columns: repeat(4, 1fr);
