@@ -108,21 +108,193 @@
         <div>
           <p>Top store products</p>
           <div class="store-products">
-            <div>
-              <img src="imgs/title.jpg" alt="Kirby" />
-              <p>Kirby</p>
+            <div class="trending">
+              <img src="game-imgs/kirby.webp" alt="Kirby" />
+              <div class="trending-content">
+                <p>Kirby™ and the Forgotten Land</p>
+                <div class="align space">
+                  <p class="arrow nintendo">Nintendo Switch</p>
+                  <button
+                    class="link heart"
+                    onclick="displayHeart(`0`); setFavorite(0)"
+                  >
+                    <svg viewBox="0 0 54 54" fill="red" stroke="red" width="34">
+                      <g>
+                        <path
+                          d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                        ></path>
+                        <path
+                          class="filling"
+                          d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                        ></path>
+                      </g>
+                      <g class="sparks">
+                        <path
+                          class="spark"
+                          d="M27 8V0M27 46v8"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                          stroke-width="1.99998"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M46 27h8M8 27H0"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                          stroke-width="1.99998"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div>
-              <img src="imgs/autumn.jpg" alt="Pokémon" />
-              <p>Pokémon</p>
+            <div class="trending">
+              <img src="game-imgs/pokemon.jpeg" alt="Pokémon" />
+              <div class="trending-content">
+                <p>Pokémon™ Legends: Arceus</p>
+                <div class="align space">
+                  <p class="arrow nintendo">Nintendo Switch</p>
+                  <button
+                    class="link heart"
+                    onclick="displayHeart(`1`); setFavorite(1)"
+                  >
+                    <svg viewBox="0 0 54 54" fill="red" stroke="red" width="34">
+                      <g>
+                        <path
+                          d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                        ></path>
+                        <path
+                          class="filling"
+                          d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                        ></path>
+                      </g>
+                      <g class="sparks">
+                        <path
+                          class="spark"
+                          d="M27 8V0M27 46v8"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                          stroke-width="1.99998"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M46 27h8M8 27H0"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                          stroke-width="1.99998"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div>
-              <img src="imgs/docks.jpeg" alt="Metroid" />
-              <p>Metroid</p>
+            <div class="trending">
+              <img src="game-imgs/metroid.webp" alt="Metroid" />
+              <div class="trending-content">
+                <p>Metroid™ Dread</p>
+                <div class="align space">
+                  <p class="arrow nintendo">Nintendo Switch</p>
+                  <button
+                    class="link heart"
+                    onclick="displayHeart(`2`); setFavorite(2)"
+                  >
+                    <svg viewBox="0 0 54 54" fill="red" stroke="red" width="34">
+                      <g>
+                        <path
+                          d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                        ></path>
+                        <path
+                          class="filling"
+                          d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                        ></path>
+                      </g>
+                      <g class="sparks">
+                        <path
+                          class="spark"
+                          d="M27 8V0M27 46v8"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                          stroke-width="1.99998"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M46 27h8M8 27H0"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                          stroke-width="1.99998"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div>
-              <img src="imgs/farm.jpg" alt="Sports" />
-              <p>Sports</p>
+            <div class="trending">
+              <img src="game-imgs/sports.jpeg" alt="Sports" />
+              <div class="trending-content">
+                <p>Nintendo Switch™ Sports</p>
+                <div class="align space">
+                  <p class="arrow nintendo">Nintendo Switch</p>
+                  <button
+                    class="link heart"
+                    onclick="displayHeart(`3`); setFavorite(3)"
+                  >
+                    <svg viewBox="0 0 54 54" fill="red" stroke="red" width="34">
+                      <g>
+                        <path
+                          d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                        ></path>
+                        <path
+                          class="filling"
+                          d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                        ></path>
+                      </g>
+                      <g class="sparks">
+                        <path
+                          class="spark"
+                          d="M27 8V0M27 46v8"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                          stroke-width="1.99998"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M46 27h8M8 27H0"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                          stroke-width="1.99998"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -674,48 +846,70 @@
               </a>
             </div>
             <div class="carousel-list">
-              <img
-                class="game-img"
-                src="imgs/title.jpg"
-                alt="Titlecard"
-                onclick="currentSlide(1)"
-              />
-              <img
-                class="game-img"
-                src="imgs/farm.jpg"
-                alt="Farm"
-                onclick="currentSlide(2)"
-              />
-              <img
-                class="game-img"
-                src="imgs/autumn.jpg"
-                alt="Autumn"
-                onclick="currentSlide(3)"
-              />
-              <img
-                class="game-img"
-                src="imgs/robin.jpeg"
-                alt="Robin"
-                onclick="currentSlide(4)"
-              />
-              <img
-                class="game-img"
-                src="imgs/docks.jpeg"
-                alt="Docks"
-                onclick="currentSlide(5)"
-              />
-              <img
-                class="game-img"
-                src="imgs/fishing.jpeg"
-                alt="Fishing"
-                onclick="currentSlide(6)"
-              />
-              <img
-                class="game-img"
-                src="imgs/riding.jpeg"
-                alt="Riding"
-                onclick="currentSlide(7)"
-              />
+              <div class="carousel-list-content" id="carousel-list">
+                <img
+                  class="game-img"
+                  src="imgs/title.jpg"
+                  alt="Titlecard"
+                  onclick="currentSlide(1)"
+                />
+                <img
+                  class="game-img"
+                  src="imgs/farm.jpg"
+                  alt="Farm"
+                  onclick="currentSlide(2)"
+                />
+                <img
+                  class="game-img"
+                  src="imgs/autumn.jpg"
+                  alt="Autumn"
+                  onclick="currentSlide(3)"
+                />
+                <img
+                  class="game-img"
+                  src="imgs/robin.jpeg"
+                  alt="Robin"
+                  onclick="currentSlide(4)"
+                />
+                <img
+                  class="game-img"
+                  src="imgs/docks.jpeg"
+                  alt="Docks"
+                  onclick="currentSlide(5)"
+                />
+                <img
+                  class="game-img"
+                  src="imgs/fishing.jpeg"
+                  alt="Fishing"
+                  onclick="currentSlide(6)"
+                />
+                <img
+                  class="game-img"
+                  src="imgs/riding.jpeg"
+                  alt="Riding"
+                  onclick="currentSlide(7)"
+                />
+              </div>
+              <a class="slideback" onclick="sidescroll('carousel-list', 0, 0)">
+                <svg viewBox="0 0 32 32" width="24" color="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M14.3 16l12.4 11.7-4.5 4.3L5.3 16 22.2 0l4.5 4.3z"
+                  ></path>
+                </svg>
+              </a>
+              <a class="slide" onclick="sidescroll('carousel-list', 0, 1)">
+                <svg viewBox="0 0 32 32" width="24" color="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M5.3 4.3L9.8 0l16.9 16L9.8 32l-4.5-4.3L17.7 16z"
+                  ></path>
+                </svg>
+              </a>
             </div>
             <div class="E10" class="align">
               <a href="#">
@@ -738,7 +932,7 @@
               <h1 class="price">$14.99</h1>
               <button
                 class="link heart"
-                onclick="displayElement(`filling`); setFavorite()"
+                onclick="displayHeart(`4`); setFavorite(4)"
               >
                 <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
                   <g>
@@ -746,8 +940,7 @@
                       d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
                     ></path>
                     <path
-                      id="filling"
-                      class="heart-filled"
+                      class="filling"
                       d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
                     ></path>
                   </g>
@@ -966,261 +1159,292 @@
       </section>
       <section class="main-margin like-this">
         <h2>More like this</h2>
-        <div class="games-list">
-          <div class="game">
-            <img
-              class="game-img"
-              src="game-imgs/My_Time_at_Portia.jpg"
-              alt="My time in Portia"
-            />
-            <div class="game-content">
-              <p class="bold">My time at Portia</p>
-              <p class="bold">$29.99</p>
-              <p class="arrow nintendo">Nintendo Switch</p>
-              <button
-                class="link heart"
-                onclick="displayElement(`filling1`); setFavorite()"
-              >
-                <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
-                  <g>
-                    <path
-                      d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
-                    ></path>
-                    <path
-                      id="filling1"
-                      class="heart-filled"
-                      d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
-                    ></path>
-                  </g>
-                  <g class="sparks">
-                    <path
-                      class="spark"
-                      d="M27 8V0M27 46v8"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
-                      stroke-width="1.99998"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M46 27h8M8 27H0"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
-                      stroke-width="1.99998"
-                    ></path>
-                  </g>
-                </svg>
-              </button>
+        <div class="games">
+          <a class="slideback" onclick="sidescroll('games', 1, 0)">
+            <svg viewBox="0 0 32 32" width="32" color="currentColor">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="currentColor"
+                d="M14.3 16l12.4 11.7-4.5 4.3L5.3 16 22.2 0l4.5 4.3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="slide" onclick="sidescroll('games', 1, 1)">
+            <svg viewBox="0 0 32 32" width="32" color="currentColor">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="currentColor"
+                d="M5.3 4.3L9.8 0l16.9 16L9.8 32l-4.5-4.3L17.7 16z"
+              ></path>
+            </svg>
+          </a>
+          <div class="games-list" id="games">
+            <div class="game">
+              <img
+                class="game-img"
+                src="game-imgs/My_Time_at_Portia.jpg"
+                alt="My time in Portia"
+              />
+              <div class="game-content">
+                <p class="bold name">My time at Portia</p>
+                <p class="demo"></p>
+                <p class="bold">$29.99</p>
+                <div class="align space">
+                  <p class="arrow nintendo">Nintendo Switch</p>
+                  <button
+                    class="link heart"
+                    onclick="displayHeart(`5`); setFavorite(5)"
+                  >
+                    <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
+                      <g>
+                        <path
+                          d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                        ></path>
+                        <path
+                          class="filling"
+                          d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                        ></path>
+                      </g>
+                      <g class="sparks">
+                        <path
+                          class="spark"
+                          d="M27 8V0M27 46v8"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                          stroke-width="1.99998"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M46 27h8M8 27H0"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                          stroke-width="1.99998"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="game">
-            <img
-              class="game-img"
-              src="game-imgs/Moonlighter.jpeg"
-              alt="Moonlighter"
-            />
-            <div class="game-content">
-              <p class="bold">Moonlighter</p>
-              <p>Free demo</p>
-              <p class="bold">$24.99</p>
-              <p class="arrow nintendo">Nintendo Switch</p>
-              <button
-                class="link heart"
-                onclick="displayElement(`filling1`); setFavorite()"
-              >
-                <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
-                  <g>
-                    <path
-                      d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
-                    ></path>
-                    <path
-                      id="filling1"
-                      class="heart-filled"
-                      d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
-                    ></path>
-                  </g>
-                  <g class="sparks">
-                    <path
-                      class="spark"
-                      d="M27 8V0M27 46v8"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
-                      stroke-width="1.99998"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M46 27h8M8 27H0"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
-                      stroke-width="1.99998"
-                    ></path>
-                  </g>
-                </svg>
-              </button>
+            <div class="game">
+              <img
+                class="game-img"
+                src="game-imgs/Moonlighter.jpeg"
+                alt="Moonlighter"
+              />
+              <div class="game-content">
+                <p class="bold name">Moonlighter</p>
+                <p class="demo"><span>Free demo</span></p>
+                <p class="bold">$24.99</p>
+                <div class="align space">
+                  <p class="arrow nintendo">Nintendo Switch</p>
+                  <button
+                    class="link heart"
+                    onclick="displayHeart(`6`); setFavorite(6)"
+                  >
+                    <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
+                      <g>
+                        <path
+                          d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                        ></path>
+                        <path
+                          class="filling"
+                          d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                        ></path>
+                      </g>
+                      <g class="sparks">
+                        <path
+                          class="spark"
+                          d="M27 8V0M27 46v8"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                          stroke-width="1.99998"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M46 27h8M8 27H0"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                          stroke-width="1.99998"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="game">
-            <img
-              class="game-img"
-              src="game-imgs/Little_Dragons_Cafe.jpeg"
-              alt="Little Dragons Café"
-            />
-            <div class="game-content">
-              <p class="bold">Little Dragons Café</p>
-              <p class="bold">$59.99</p>
-              <p class="arrow nintendo">Nintendo Switch</p>
-              <button
-                class="link heart"
-                onclick="displayElement(`filling1`); setFavorite()"
-              >
-                <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
-                  <g>
-                    <path
-                      d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
-                    ></path>
-                    <path
-                      id="filling1"
-                      class="heart-filled"
-                      d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
-                    ></path>
-                  </g>
-                  <g class="sparks">
-                    <path
-                      class="spark"
-                      d="M27 8V0M27 46v8"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
-                      stroke-width="1.99998"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M46 27h8M8 27H0"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
-                      stroke-width="1.99998"
-                    ></path>
-                  </g>
-                </svg>
-              </button>
+            <div class="game">
+              <img
+                class="game-img"
+                src="game-imgs/Little_Dragons_Cafe.jpeg"
+                alt="Little Dragons Café"
+              />
+              <div class="game-content">
+                <p class="bold name">Little Dragons Café</p>
+                <p class="demo"></p>
+                <p class="bold">$59.99</p>
+                <div class="align space">
+                  <p class="arrow nintendo">Nintendo Switch</p>
+                  <button
+                    class="link heart"
+                    onclick="displayHeart(`7`); setFavorite(7)"
+                  >
+                    <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
+                      <g>
+                        <path
+                          d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                        ></path>
+                        <path
+                          class="filling"
+                          d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                        ></path>
+                      </g>
+                      <g class="sparks">
+                        <path
+                          class="spark"
+                          d="M27 8V0M27 46v8"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                          stroke-width="1.99998"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M46 27h8M8 27H0"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                          stroke-width="1.99998"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="game">
-            <img
-              class="game-img"
-              src="game-imgs/animal_crossing_new_horizons.jpeg"
-              alt="Animal Crossing"
-            />
-            <div class="game-content">
-              <p class="bold">Animal Crossing™: New Horizons</p>
-              <p class="bold">$59.99</p>
-              <p class="arrow nintendo">Nintendo Switch</p>
-              <button
-                class="link heart"
-                onclick="displayElement(`filling1`); setFavorite()"
-              >
-                <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
-                  <g>
-                    <path
-                      d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
-                    ></path>
-                    <path
-                      id="filling1"
-                      class="heart-filled"
-                      d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
-                    ></path>
-                  </g>
-                  <g class="sparks">
-                    <path
-                      class="spark"
-                      d="M27 8V0M27 46v8"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
-                      stroke-width="1.99998"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M46 27h8M8 27H0"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
-                      stroke-width="1.99998"
-                    ></path>
-                  </g>
-                </svg>
-              </button>
+            <div class="game">
+              <img
+                class="game-img"
+                src="game-imgs/animal_crossing_new_horizons.jpeg"
+                alt="Animal Crossing"
+              />
+              <div class="game-content">
+                <p class="bold name">Animal Crossing™: New Horizons</p>
+                <p class="demo"></p>
+                <p class="bold">$59.99</p>
+                <div class="align space">
+                  <p class="arrow nintendo">Nintendo Switch</p>
+                  <button
+                    class="link heart"
+                    onclick="displayHeart(`8`); setFavorite(8)"
+                  >
+                    <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
+                      <g>
+                        <path
+                          d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                        ></path>
+                        <path
+                          class="filling"
+                          d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                        ></path>
+                      </g>
+                      <g class="sparks">
+                        <path
+                          class="spark"
+                          d="M27 8V0M27 46v8"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                          stroke-width="1.99998"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M46 27h8M8 27H0"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                          stroke-width="1.99998"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="game">
-            <img
-              class="game-img"
-              src="game-imgs/cozy_grove.jpeg"
-              alt="Cozy Grove"
-            />
-            <div class="game-content">
-              <p class="bold">Cozy Grove</p>
-              <p class="bold">$14.99</p>
-              <p class="arrow nintendo">Nintendo Switch</p>
-              <button
-                class="link heart"
-                onclick="displayElement(`filling1`); setFavorite()"
-              >
-                <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
-                  <g>
-                    <path
-                      d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
-                    ></path>
-                    <path
-                      id="filling1"
-                      class="heart-filled"
-                      d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
-                    ></path>
-                  </g>
-                  <g class="sparks">
-                    <path
-                      class="spark"
-                      d="M27 8V0M27 46v8"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
-                      stroke-width="1.99998"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M46 27h8M8 27H0"
-                      stroke-width="2"
-                    ></path>
-                    <path
-                      class="spark"
-                      d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
-                      stroke-width="1.99998"
-                    ></path>
-                  </g>
-                </svg>
-              </button>
+            <div class="game">
+              <img
+                class="game-img"
+                src="game-imgs/cozy_grove.jpeg"
+                alt="Cozy Grove"
+              />
+              <div class="game-content">
+                <p class="bold name">Cozy Grove</p>
+                <p class="demo"></p>
+                <p class="bold">$14.99</p>
+                <div class="align space">
+                  <p class="arrow nintendo">Nintendo Switch</p>
+                  <button
+                    class="link heart"
+                    onclick="displayHeart(`9`); setFavorite(9)"
+                  >
+                    <svg viewBox="0 0 54 54" fill="red" stroke="red" width="48">
+                      <g>
+                        <path
+                          d="M27 38.9c-.4 0-.6-.1-.8-.4L16.7 29c-1.8-1.8-2.7-3.8-2.7-6 0-4.4 3.5-8 7.9-8 1.9 0 3.7.8 5.1 2.3 1.4-1.4 3.2-2.3 5.1-2.3 4.4 0 7.9 3.6 7.9 8 0 2.6-1.5 4.6-2.7 6.1l-9.5 9.4c-.2.3-.6.4-.8.4zm-5.1-21.4c-3.1 0-5.6 2.5-5.6 5.6 0 1.9 1.1 3.3 2 4.3l8.6 8.7 8.5-8.6c1.4-1.5 2.1-3 2.1-4.4 0-3.1-2.5-5.6-5.6-5.6-1.5 0-3 1-4.1 2.5-.5.6-1.4.6-1.9 0-1-1.6-2.4-2.5-4-2.5z"
+                        ></path>
+                        <path
+                          class="filling"
+                          d="M32.1 15.1c-1.9 0-3.7.8-5.1 2.3-1.4-1.4-3.2-2.3-5.1-2.3-4.4 0-7.9 3.6-7.9 8 0 2.1.9 4.2 2.7 6l9.5 9.5c.2.2.5.4.8.4.2 0 .6-.1.8-.4l9.5-9.4c1.2-1.4 2.7-3.5 2.7-6.1 0-4.4-3.5-8-7.9-8z"
+                        ></path>
+                      </g>
+                      <g class="sparks">
+                        <path
+                          class="spark"
+                          d="M27 8V0M27 46v8"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.171 12.828l5.657-5.657M12.829 12.828L7.171 7.172"
+                          stroke-width="1.99998"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M46 27h8M8 27H0"
+                          stroke-width="2"
+                        ></path>
+                        <path
+                          class="spark"
+                          d="M41.172 41.172l5.657 5.656M12.829 41.171l-5.657 5.657"
+                          stroke-width="1.99998"
+                        ></path>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1584,7 +1808,28 @@
           </svg>
         </a>
         <div class="modal-list">
-          <img
+          <a class="slideback" onclick="sidescroll('modal-list', 2, 0)">
+            <svg viewBox="0 0 32 32" width="24" color="currentColor">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="currentColor"
+                d="M14.3 16l12.4 11.7-4.5 4.3L5.3 16 22.2 0l4.5 4.3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="slide" onclick="sidescroll('modal-list', 2, 1)">
+            <svg viewBox="0 0 32 32" width="24" color="currentColor">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="currentColor"
+                d="M5.3 4.3L9.8 0l16.9 16L9.8 32l-4.5-4.3L17.7 16z"
+              ></path>
+            </svg>
+          </a>
+          <div class="modal-list-content" id="modal-list">
+            <img
             class="game-img"
             src="imgs/title.jpg"
             onclick="currentSlide(1)"
@@ -1626,6 +1871,7 @@
             onclick="currentSlide(7)"
             alt="Riding"
           />
+          </div>
         </div>
       </div>
     </div>

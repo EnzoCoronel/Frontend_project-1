@@ -2,27 +2,36 @@ let oldG,
   slideIndex = 1,
   s = 0;
 
-let heart = document.getElementById("filling"),
-  modal = document.getElementsByClassName("modal-content")[0],
+let modal = document.getElementsByClassName("modal-content")[0],
   carousel = document.getElementsByClassName("carousel-content")[0];
+hearts = document.getElementsByClassName("filling");
 
 window.onload = function () {
-  if (localStorage.getItem("favorite")) {
-    heart.classList.add("show-block");
+  for (index = 0; index < hearts.length; index++) {
+    if (localStorage.getItem(`favorite${index}`)) {
+      hearts[index].classList.add("show-block");
+    }
   }
 };
 
-const setFavorite = () => {
-  if (heart.classList.contains("show-block")) {
-    localStorage.setItem("favorite", 1);
+const displayHeart = (n) => {
+  document.getElementsByClassName("filling")[n].classList.toggle("show-block");
+};
+
+const setFavorite = (n) => {
+  if (
+    document
+      .getElementsByClassName("filling")
+      [n].classList.contains("show-block")
+  ) {
+    localStorage.setItem(`favorite${n}`, 1);
   } else {
-    localStorage.removeItem("favorite");
+    localStorage.removeItem(`favorite${n}`);
   }
 };
 
 const displayElement = (element) => {
   document.getElementById(element).classList.toggle("show-block");
-  console.log("mudou");
 };
 
 const thisDrop = (thisId, thisClass) => {
@@ -31,6 +40,7 @@ const thisDrop = (thisId, thisClass) => {
   document.getElementById("cover").classList.toggle("show-block");
   if (thisId == "search-toggle") {
     document.getElementById("top-correct").classList.toggle("hide");
+    document.getElementsByTagName("nav")[0].classList.toggle("hide");
   }
 };
 
@@ -55,7 +65,31 @@ window.onclick = function (event) {
     document.getElementById("cover").classList.remove("show-block");
     document.getElementById("nav-toggle").classList.remove("nav-active");
     document.getElementById("store-toggle").classList.remove("store-active");
+    document.getElementById("search-toggle").classList.remove("search-active");
     document.getElementsByTagName("body")[0].classList.remove("scroll");
+    document.getElementById("top-correct").classList.remove("hide");
+    document.getElementsByTagName("nav")[0].classList.remove("hide");
+  }
+};
+
+sidescroll = (element, n, side) => {
+  let thisElement = document.getElementById(element);
+  let last = thisElement.scrollLeft;
+  if (side == 1) {
+    thisElement.scrollLeft += 260;
+    document.getElementsByClassName("slideback")[n].classList.add("show-flex");
+    if (thisElement.scrollLeft - 260 < last) {
+      document.getElementsByClassName("slide")[n].classList.add("hide");
+    }
+    console.log(thisElement.scrollLeft);
+  } else {
+    thisElement.scrollLeft -= 260;
+    if (thisElement.scrollLeft + 260 > last) {
+      document
+        .getElementsByClassName("slideback")
+        [n].classList.remove("show-flex");
+    }
+    document.getElementsByClassName("slide")[n].classList.remove("hide");
   }
 };
 
@@ -63,24 +97,13 @@ window.onclick = function (event) {
 
 const openModal = () => {
   document.getElementById("modal").classList.add("show-block");
-  document.getElementsByTagName("header")[0].style.filter =
-    "brightness(40%) blur(15px)";
-  document.getElementsByTagName("main")[0].style.filter =
-    "brightness(40%) blur(15px)";
-  document.getElementsByTagName("footer")[0].style.filter =
-    "brightness(40%) blur(15px)";
   document.getElementsByTagName("body")[0].classList.add("scroll");
 };
 
 function closeModal() {
   document.getElementById("modal").classList.remove("show-block");
-  document.getElementsByTagName("header")[0].style.filter = "none";
-  document.getElementsByTagName("main")[0].style.filter = "none";
-  document.getElementsByTagName("footer")[0].style.filter = "none";
   document.getElementsByTagName("body")[0].classList.remove("scroll");
 }
-
-showSlides(slideIndex);
 
 function plusSlides(n) {
   s += n;
@@ -96,31 +119,9 @@ function plusSlides(n) {
     modal.style.transform = `translatex(calc(-100% * ${s}))`;
     carousel.style.transform = `translatex(calc(-100% * ${s}))`;
   }
-  // showSlides((slideIndex += n));
 }
 
 function currentSlide(n) {
   modal.style.transform = `translatex(calc(-100% * ${n - 1}))`;
   carousel.style.transform = `translatex(calc(-100% * ${n - 1}))`;
-  // showSlides((slideIndex = n));
 }
-
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("slides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {
-//     slideIndex = 1;
-//   }
-//   if (n < 1) {
-//     slideIndex = slides.length;
-//   }
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   dots[slideIndex - 1].className += " active";
-// }
